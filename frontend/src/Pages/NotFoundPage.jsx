@@ -1,30 +1,23 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-import notfoundPicture from '../assets/404.JPG';
-
 import routes from '../utils/routes';
-import PageContainer from '../components/PageContainer';
+import notFoundImage from '../assets/notFound.jpg';
 
 const NotFoundPage = () => {
   const { t } = useTranslation();
-
   return (
-    <PageContainer>
-      <div className="d-flex align-items-center justify-content-center">
-        <img
-          src={notfoundPicture}
-          className="rounded-circle"
-          alt={t('login.submit')}
-          width="250"
-        />
-      </div>
-      <h1 className="h4 text-muted d-flex align-items-center justify-content-center">{t('notFound.header')}</h1>
-      <p className="text-muted d-flex align-items-center justify-content-center">
-        {t('notFound.message')}
+    <div className="text-center mt-5">
+      <img
+        src={notFoundImage}
+        alt={t('notFoundPage.logoAlt')}
+        className="img-fluid h-25 rounded-circle"
+      />
+      <h1 className="h4 text-muted">{t('notFoundPage.title')}</h1>
+      <p>
+        {t('notFoundPage.text')}
+        <Link to={routes.mainPagePath()}>{t('notFoundPage.link')}</Link>
       </p>
-      <Link to={routes.mainPage()} className="d-flex align-items-center justify-content-center mb-3">{t('notFound.linkText')}</Link>
-    </PageContainer>
+    </div>
   );
 };
 

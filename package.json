@@ -1,22 +1,17 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "Studying project Chat(Slack) with React framework",
+  "description": "Hexlet's final project. Сhat",
+  "main": "index.js",
   "scripts": {
-    "build": "npm run build --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-server -s ./frontend/build",
+    "build": "npm run build --prefix frontend",
     "postinstall": "cd frontend && npm ci"
+   
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/VolodiaKuz/frontend-project-12.git"
-  },
-  "author": "VolodiaKuz",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VolodiaKuz/frontend-project-12/issues"
-  },
-  "homepage": "https://github.com/VolodiaKuz/frontend-project-12",
   "dependencies": {
     "@hexlet/chat-server": "^2.0.4"
   }

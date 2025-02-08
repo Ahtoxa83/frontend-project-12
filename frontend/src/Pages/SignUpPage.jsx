@@ -1,26 +1,19 @@
 import { useTranslation } from 'react-i18next';
+import RegistrationForm from '../components/PagesComponents/RegistrationForm';
+import Image from '../components/PagesComponents/Image';
+import Container from '../components/PagesComponents/Container';
+import registration from '../assets/registration.jpg';
 
-import signupPicture from '../assets/signup_logo.png';
-import SignUpForm from '../components/Forms/SignUpForm';
-import PageContainer from '../components/PageContainer';
-
-const LoginPage = () => {
+const SignUpPage = () => {
   const { t } = useTranslation();
-
   return (
-    <PageContainer>
-      <div className="card-body row p-5">
-        <div className="d-flex align-items-center justify-content-center col-12 col-md-6">
-          <img
-            src={signupPicture}
-            className="rounded-circle"
-            alt={t('login.submit')}
-          />
-        </div>
-        <SignUpForm />
+    <Container>
+      <div className="card-body d-flex flex-column flex-md-row justify-content-around align-items-center p-5">
+        <Image image={registration} alt={t('image.signup')} />
+        <RegistrationForm />
       </div>
-    </PageContainer>
+    </Container>
   );
 };
 
-export default LoginPage;
+export default SignUpPage;
